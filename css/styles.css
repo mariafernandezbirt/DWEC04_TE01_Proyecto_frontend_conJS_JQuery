@@ -170,31 +170,31 @@ body {
 
 
 .load-more {
-  display: block;
-  margin: 1rem auto;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 6px;
-  background: #222;
-  color: #fff;
-  cursor: pointer;
+    display: block;
+    margin: 1rem auto;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
 }
 .load-more:hover {
-  background: #444;
+    background: #444;
 }
 
 /* Search */
 .search-bar {
-  margin: 1rem 0;
+    margin: 1rem 0;
 }
 #search {
-  width: 100%;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #ba0079;
-  border-radius: 6px;
-  font-size: 1rem;
-  color: #ba0079;
-  font-weight: bold;
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ba0079;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #ba0079;
+    font-weight: bold;
 }
 
 #detail-release{
@@ -203,23 +203,23 @@ body {
 
 
 .status {
-  margin-top: 0.5rem;
-  color: #555;
-  font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
 }
 
 .load-more {
-  display: block;
-  margin: 1rem auto;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 6px;
-  background: #222;
-  color: #fff;
-  cursor: pointer;
+    display: block;
+    margin: 1rem auto;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
 }
 .load-more:hover {
-  background: #444;
+    background: #444;
 }
 
 
@@ -229,7 +229,7 @@ body {
     border-collapse: separate;
     border-spacing: 0;
     margin-top: 20px;
-    background: rgba(0,0,0,0.6); /* fondo semitransparente negro */
+    background: rgba(0,0,0,0.6); 
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -243,7 +243,7 @@ body {
 }
 
 .comparative-table th {
-    background: #ba0079; /* rosa corporativo */
+    background: #ba0079; 
     font-weight: 600;
     position: relative;
 }
@@ -270,7 +270,6 @@ body {
     cursor: pointer;
 }
 
-
 .table-selector {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -290,32 +289,31 @@ body {
     cursor: pointer;
 }
 
-
 /* Flechas ordenar */
 .sort-icon {
     cursor: pointer;
     margin-left: 6px;
-    color: #aaa; /* gris apagado por defecto */
+    color: #aaa; 
     font-size: 0.8em;
 }
 
 .sort-icon.active {
-    color: #ba0079; /* azul activo */
+    color: #ba0079; 
     font-weight: bold;
 }
 
 
 /* Indicadores de orden */
 .comparative-table th.sorted-asc::after {
-  content: " ▲";
-  color: #ba0079;
-  font-size: 0.8rem;
+    content: " ▲";
+    color: #ba0079;
+    font-size: 0.8rem;
 }
 
 .comparative-table th.sorted-desc::after {
-  content: " ▼";
-  color: #ba0079;
-  font-size: 0.8rem;
+    content: " ▼";
+    color: #ba0079;
+    font-size: 0.8rem;
 }
 
 
@@ -342,17 +340,15 @@ body {
 }
 
 
-
 /* Boton volver */
 .botonVolver{
     margin-top: 2%;
 }
 
-
 .btnVolver {
     display: inline-block;
     padding: 10px 18px;
-    background: linear-gradient(135deg, #ba0079, #8a005a); /* degradado rosa oscuro */
+    background: linear-gradient(135deg, #ba0079, #8a005a); 
     color: #fff;
     font-weight: 600;
     text-decoration: none;
@@ -370,13 +366,13 @@ body {
 }
 
 .btnVolver:hover {
-    background: linear-gradient(135deg, #ff4fa3, #ba0079); /* rosa más vivo al pasar el ratón */
+    background: linear-gradient(135deg, #ff4fa3, #ba0079); 
     box-shadow: 0 6px 12px rgba(0,0,0,0.35);
     transform: translateY(-2px);
 }
 
 .btnVolver:hover::before {
-    transform: translateX(-3px); /* flecha se mueve un poquito */
+    transform: translateX(-3px); 
 }
 
 
@@ -438,8 +434,6 @@ body {
     text-align: left;       
     align-items: flex-start;
 }
-
-
 
 #movie-detail .details p {
     font-size: 16px;

@@ -41,7 +41,7 @@ export function getMovieById(id) {
                 title: movie.title,
                 description: movie.overview,
                 releaseDate: movie.release_date,
-                year, // solo el año
+                year,
                 rating: movie.vote_average,
                 image: movie.poster_path ? IMG_URL + movie.poster_path : "",
                 genres: movie.genres || [],
@@ -60,7 +60,7 @@ export async function searchMovies(query, page = 1) {
     const response = await fetch(url);
     const data = await response.json();
 
-    // 🔹 Filtrar películas con datos
+    // Filtrar películas con datos
     let results = data.results.filter(movie =>
         movie.poster_path &&
         movie.overview &&
@@ -109,7 +109,6 @@ export async function searchMovies(query, page = 1) {
         currentPage: page
     };
 }
-
 
 
 export function getSimilarMovies(id) {
@@ -225,30 +224,6 @@ export async function getMoviesByGenre(movieId) {
             image: IMG_URL + m.poster_path
         }));
 
-}
-
-
-export async function getMoviesByDirector(movieId) {
-    const url = `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}&language=es-ES`;
-    const data = await fetch(url).then(r => r.json());
-
-    const director = data.crew.find(c => c.job === "Director");
-    if (!director) return [];
-
-    const directorUrl = `${BASE_URL}/search/person?api_key=${API_KEY}&language=es-ES&query=${encodeURIComponent(director.name)}`;
-    const directorData = await fetch(directorUrl).then(r => r.json());
-
-    // coger sus películas conocidas
-    const movies = directorData.results[0]?.known_for || [];
-    return movies.map(m => ({
-        id: m.id,
-        title: m.title || m.name,
-        description: m.overview,
-        releaseDate: m.release_date,
-        year: movie.release_date ? movie.release_date.split("-")[0] : null,
-        rating: m.vote_average,
-        image: m.poster_path ? IMG_URL + m.poster_path : ""
-    }));
 }
 
 export async function getMoviesByYear(movieId) {

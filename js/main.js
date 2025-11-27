@@ -1,4 +1,4 @@
-import { getPopularMovies, getMovieById, searchMovies, getMoviesByGenre, getMoviesByDirector, getMoviesByYear, getSimilarMovies  } from "./services/movie.services.js";
+import { getPopularMovies, getMovieById, searchMovies, getMoviesByGenre, getMoviesByYear, getSimilarMovies  } from "./services/movie.services.js";
 import { renderMovieList, renderKPIs, renderMovieDetail, updateSectionTitle, hideKPIs, showKPIs, renderSimilarMoviesTable} from "./models/movie.models.js";
 import { calculateTotalMovies, calculateAverageScore} from "./data/movie.data.js";
 
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const path = window.location.pathname;
 
     if (path.endsWith("index.html") || path.endsWith("/")) {
-        // Página principal → películas populares
+        // Página principal > películas populares
         const movies = await getPopularMovies();
         renderKPIs(calculateTotalMovies(movies), calculateAverageScore(movies), movies);
         renderMovieList(movies);
@@ -69,10 +69,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
-
-// =======================
-// Funciones auxiliares
-// =======================
 
 function getCurrentMovieId() {
     const params = new URLSearchParams(window.location.search);

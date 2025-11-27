@@ -1,55 +1,39 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Luces, Cámara y ¡Acción! — Resumen</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Luces, Cámara y ¡Acción! — Resumen</title>
+    <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="centrar">Luces, Cámara y ¡Acción!</h1>
-      <p class="subtitle centrar">Explora cada género… ¡del terror a la comedia!</p>
-    </div>
-  </header>
+    <header class="site-header">
+        <div class="container">
+        <h1 class="centrar">Luces, Cámara y ¡Acción!</h1>
+        <p class="subtitle centrar">Explora cada género… ¡del terror a la comedia!</p>
+        </div>
+    </header>
 
-  <main class="container">
-    <section id="movie-detail">
-      <!-- Todo se generará desde JS -->
-    </section>
+    <main class="container">
+        <section id="movie-detail"></section>
 
+        <div class="table-selector">
+            <label for="movieTableType">Selecciona:</label>
+            <select id="movieTableType"></select>
+        </div>
 
-<div class="table-selector">
-  <label for="movieTableType">Selecciona:</label>
-  <select id="movieTableType">
-    <!-- Opciones se insertan dinámicamente -->
-  </select>
-</div>
+        <div id="similar-movies"></div>
 
-<div id="similar-movies"></div>
+        <div id="similar-movies"></div>
 
+        <section class="botonVolver"><a href="../index.html" class="btnVolver">Volver</a></section>      
 
-    <!--
-<div class="table-selector">
-  <label for="movieTableType">Seleciona:</label>
-  <select id="movieTableType">
-    <option value="genre">Películas del mismo género</option>
-    <option value="director">Películas del mismo director</option>
-    <option value="year">Películas del mismo año</option>
-  </select>
-</div>-->
+    </main>
 
-<div id="similar-movies"></div>
+    <footer class="site-footer">
+        <div class="container">Proyecto DWEC04 · Luces, Cámara y ¡Acción! · Datos: TMDB (es-ES)</div>
+    </footer>
 
-    <section class="botonVolver"><a href="../index.html" class="btnVolver">Volver</a></section>      
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">Proyecto DWEC04 · Luces, Cámara y ¡Acción! · Datos: TMDB (es-ES)</div>
-  </footer>
-
-  <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html>

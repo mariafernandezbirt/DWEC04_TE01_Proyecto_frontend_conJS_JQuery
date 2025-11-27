@@ -30,7 +30,6 @@ export function renderMovieList(movies) {
 
 import { calculateMostPopular } from "../data/movie.data.js";
 
-
 export function renderKPIs(total, avg, movies) {
     document.getElementById("total-movies").textContent = total;
     const avgEl = document.getElementById("avg-vote");
@@ -42,7 +41,6 @@ export function renderKPIs(total, avg, movies) {
         popularEl.textContent = mostPopular || "—";
     }
 }
-
 
 export function renderMovieDetail(movie) {
     const container = document.getElementById("movie-detail");
@@ -225,7 +223,6 @@ function enableSimilarMoviesSorting(table, movies) {
         `).join("");
     }
 }
-
 
 export function hideKPIs() {
     const kpi = document.getElementById("kpi-container");
